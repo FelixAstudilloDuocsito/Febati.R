@@ -1,2 +1,0 @@
-En esta carpeta encontraremos archivos necesarios para la carpeta sin relevancia con el codigo,
-como esxtras, o archivos con informacion
