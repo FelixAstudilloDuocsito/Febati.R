@@ -1,0 +1,2 @@
+Aquí es donde van los archivos que tiene vinculo con el codigo.
+Por ejemplo si hay una imagen que agregar a la pagina mediante el codigo tiene que ir aquí
