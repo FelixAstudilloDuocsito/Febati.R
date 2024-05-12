@@ -1,0 +1,102 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4a235a; /* Fondo púrpura más oscuro */
+    color: #4a235a; /* Texto blanco */
+    padding: 20px;
+    box-shadow: 0 4px 6px #0000001a; /* Sombra en el encabezado */
+}
+body{
+    background-color: #be99d6;;
+}
+.container {
+    height: 100%;
+    padding: 1rem;  
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}  
+
+nav ul li a {
+    color: #fff; /* Texto blanco */
+    text-decoration: none;
+}
+
+#PANEL a {
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    color: #ffffff; /* Color del texto */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
+
+#PANEL a:hover {
+    background-color: #ddd; /* Cambia el color de fondo al pasar el ratón */
+    color: #666; /* Cambia el color del texto al pasar el ratón */
+}
+
+#MENU {
+    display: flex;
+    align-items: center;
+}
+
+
+#MENU img {
+    width: 50px;
+    height: 50px;
+    position:static;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: 0 2px 4px #ffffff; /* Sombra en la imagen del perfil */
+}
+
+
+footer {
+    background-color: #4a235a; /* Fondo púrpura más oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Sombra en el pie de página */
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+
+textarea {
+    font-size: 16px;
+    width: 95%;
+    height: 175px;
+  }
+@media screen and (min-width: 900px){
+    .container{
+        max-width: 95%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        max-height: 95%;
+       
+    }
+    .container-text {
+        width: 60%;
+        margin-left: 100px;
+        transform: translateY(50px);
+    }
+
+}
