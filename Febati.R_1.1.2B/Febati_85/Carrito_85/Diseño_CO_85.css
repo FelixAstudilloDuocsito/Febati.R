@@ -1,0 +1,155 @@
+/* Estilos generales */
+body {
+    
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+    color: #fff; /* Texto blanco */
+}
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4a235a; /* Fondo púrpura más oscuro */
+    color: #4a235a; /* Texto blanco */
+    padding: 20px;
+    box-shadow: 0 4px 6px #0000001a; /* Sombra en el encabezado */
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}  
+
+nav ul li a {
+    color: #fff; /* Texto blanco */
+    text-decoration: none;
+}
+
+/* Diseñito para el video de fondo*/
+#background-video {
+    position: fixed; /* Fija el video en la pantalla */
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Coloca el video detrás de otros elementos */
+}
+/*---------------------------BARRA DE TAREAS FEBATI----------------------------*/
+#PANEL a {
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    color: #ffffff; /* Color del texto */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
+#PANEL a:hover {
+    background-color: #ddd; /* Cambia el color de fondo al pasar el ratón */
+    color: #666; /* Cambia el color del texto al pasar el ratón */
+}
+#MENU{
+    display: flex;
+    align-items: center;
+}
+
+#MENU img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: 0 2px 4px #ffffff; /* Sombra en la imagen del perfil */
+}
+
+#CART {
+    font-size: 24px; /* Tamaño del icono del carrito */
+    cursor: pointer;
+    box-shadow: 0 2px 4px #00000033; /* Sombra en el icono del carrito */
+    color: #f39c12; /* Color naranja */
+}
+
+#cart:hover {
+    color: #e67e22; /* Color naranja claro al pasar el cursor */
+}
+
+#PRESENTEICHON, #products {
+    background-color: #f0e5f7; /* Fondo blanco con toque de púrpura */
+    color: #000; /* Texto negro */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px #0000001a; /* Sombra en las secciones */
+    border-radius: 10px; /* Bordes redondeados en las secciones */
+    margin: 20px; /* Espacio alrededor de las secciones */
+}
+
+#products .card {
+    border: 4px solid #9b59b6; /* Borde morado más grueso */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra en los productos */
+    width: 1000; /* Ajuste para que ocupe la mitad de la pantalla */
+    margin: 0 auto; /* Centrar el elemento */
+}
+
+#products .card-body {
+    background-color: #000; /* Cambia el color del texto a negro */
+    color: #ffffff;
+
+}
+
+
+#products .card:hover {
+    border-color: #8e44ad; /* Borde morado oscuro al pasar el cursor */
+}
+
+
+
+button, a.button, a.details {
+    background-color: #9b59b6; /* Morado */
+    color: #fff; /* Texto blanco */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra en los botones */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave */
+    text-decoration: none; /* Elimina el subrayado en los enlaces */
+}
+
+.precio-normal {
+    text-decoration: line-through; /* Tachado para el precio normal */
+    color: red; /* Color del precio normal */
+}
+
+.precio-oferta {
+    color: #b700ff; /* Color del precio en oferta */
+}
+
+
+button:hover, a.button:hover, a.details:hover {
+    background-color: #8e44ad; /* Cambio de color al pasar el cursor */
+    transform: translateY(-2px); /* Efecto de desplazamiento hacia arriba */
+}
+
+
+#CERTIFICADET {
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #200929;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
