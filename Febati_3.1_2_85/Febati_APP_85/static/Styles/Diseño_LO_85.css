@@ -1,0 +1,116 @@
+/* Estilos para la lista de usuarios */
+
+body {
+    font-family: Arial, sans-serif;
+    background: rgb(155,0,255);
+    background: linear-gradient(90deg, rgba(155,0,255,1) 0%, rgba(190,153,214,1) 100%);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent; 
+    color: transparent; /* Texto blanco */
+    padding: 20px;
+    box-shadow: 0 4px 6px #0000001a; /* Sombra en el encabezado */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}  
+
+nav ul li a {
+    color: #fff; /* Texto blanco */
+    text-decoration: none;
+}
+#PANEL a {
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    color: #ffffff; /* Color del texto */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
+#PANEL a:hover {
+    background-color: #ddd; /* Cambia el color de fondo al pasar el ratón */
+    color: #666; /* Cambia el color del texto al pasar el ratón */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(90deg, rgba(155,0,255,1) 0%, rgba(190,153,214,1) 100%);
+    border: 1px solid #000000;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: .9;
+}
+
+.container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.user-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.user-list li {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-list li:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.user-details {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+}
+
+.btn-editar,
+.btn-eliminar {
+    text-decoration: none;
+    color: #007bff;
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+}
+
+.btn-eliminar {
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-editar:hover,
+.btn-eliminar:hover {
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+}
+
+.form-eliminar {
+    margin: 0;
+}

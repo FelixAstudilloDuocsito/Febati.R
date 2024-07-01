@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'Styles/Diseño_LN_85.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Iniciar Sesión</h1>
+        <form method="POST" action="{% url 'login' %}">
+            {% csrf_token %}
+            <label style="color: #ffffff;" for="usuario">Usuario:</label>
+            <input style="color: #ffffff;" id="usuario" minlength="3" maxlength="22"  name="usuario" autofocus placeholder="Ingrese su nombre de usuario">
+            <span id="mensaje1"></span><br>
+            <label style="color: #ffffff;" for="contrasena">Contraseña:</label>
+            <input style="color: #ffffff;" type="password" id="contrasena" minlength="8" maxlength="16" name="contrasena" placeholder="Ingrese su contraseña">
+            <span id="mensaje2"></span><br>
+            <button type="submit" class="btn btn-primary">Enviar </button>
+        </form>
+                    
+        <a href="{% url 'vista_ro' %}">¿No tienes una cuenta?</a>
+        {% if mensaje %}
+            <p style="color: red;">{{ mensaje }}</p>
+        {% endif %}
+    </div>
+    <script src="{% static 'JS/Main_LN_85.js' %}"></script>
+</body>
+</html>
