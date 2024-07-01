@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Usuario</title>
+    <link rel="stylesheet" href="{% static 'Styles/Diseño_ER_85.css' %}">
+</head>
+
+<body>
+    <header class="d-flex justify-content-between align-items-center">
+        <nav id="PANEL"> 
+            <li><a href="/lista">Editar</a></li>
+        </nav>
+        
+        <!---------------------------------PANEL donde va el clasico nav------------------------------->
+        <nav id="PANEL"> 
+            <ul>
+                <li><a href="../Principal_85/Estructura_PL_85.html">INICIO</a></li>
+                <li><a href="../Ayuda_85/Estructura_AA_85.html">AYUDA</a></li>
+                <li><a href="/SE/">SERVICIO AL CLIENTE</a></li>
+                <li><a href="/CS/">COMENTARIOS</a></li>
+            </ul>
+        </nav>
+    
+        <!--------------------------------------------------------------------------------------------->
+     <!------------------------------------------------------------------------------------------------->
+    <a href="../Carrito_85/Estructura_CO_85.html"><button type="button" class="btn btn-outline-light">🛒</button></a>
+    </header>
+ <div class="container">
+    <div class="container-form">
+        <h1>Editar Usuario</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" value="{{ usuario.nombre }}" autofocus placeholder="Ingrese su nombre completo">
+            <br><span id="mensaje1"></span><br>
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" value="{{ usuario.correo }}" placeholder="Ingrese su correo electrónico">
+            <br><span id="mensaje2"></span><br>
+            <label for="usuario">Usuario:</label>
+            <input type="text" id="usuario" name="usuario" value="{{ usuario.usuario }}" placeholder="Ingrese su nombre de usuario">
+            <br><span id="mensaje3"></span><br>
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" placeholder="Ingrese su contraseña">
+            <br><span id="mensaje4"></span><br>
+            <label for="confirmar_contrasena">Confirmar contraseña:</label>
+            <input type="password" id="confirmar_contrasena" name="confirmar_contrasena" placeholder="Confirme su contraseña">
+            <br><span id="mensaje5"></span><br>
+            <button type="submit" class="btn btn-primary">Guardar cambios</button>
+        </form>
+    </div>
+ </div>
+</body>
+</html>
