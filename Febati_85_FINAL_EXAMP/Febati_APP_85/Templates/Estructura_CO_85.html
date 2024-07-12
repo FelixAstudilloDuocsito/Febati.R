@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - Febati85</title>
+    <link rel="stylesheet" href="{% static 'Styles/Diseño_CO_85.css' %}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body style="background-color: #b992be;">
+
+    <!--Estructura para el video de fondo-->
+    <video autoplay muted loop id="background-video">
+        <source src="../Img/Fondote.mp4" type="video/mp4">
+    </video>
+    <!-------------------------------------------------------------------->
+
+    <header class="d-flex justify-content-between align-items-center">
+        <nav id="PANEL"> 
+            <li><a href="/lista">Editar</a></li>
+        </nav>
+        
+        <!---------------------------------PANEL donde va el clasico nav------------------------------->
+        <nav id="PANEL"> 
+            <ul>
+                <li><a href="{% url 'INICIO' %}">INICIO</a></li>
+                <li><a href="{% url 'AYUDA' %}">AYUDA</a></li>
+                <li><a href="/SE/">SERVICIO AL CLIENTE</a></li>
+                <li><a href="/CS/">COMENTARIOS</a></li>
+                <li><a href="/agrpro/">AGREGAR PRODUCTO</a></li>
+            </ul>
+        </nav>
+    
+        <!--------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------->
+    <a href="/carrito/"><button type="button" class="btn btn-outline-light">🛒</button></a>
+    </header>   
+
+<section id="PRESENTEICHON" style="background-color: #00000000; color: #ffffff;">
+    <h2>CARRITO</h2>
+    <p>Aqui encontrarás los productos que quieres comprar.</p>
+    <p>Para una compra mas segura.</p>
+    <p>¡Recuerda que al comprar estas ayudando a miles de foquitas del mundo!</p>
+</section>
+
+<section id="products-section" style="background-color: #4a235a52; padding: 20px;">
+    <h2 style="color: #ffffff;" class="text-center">¡Tus Productos te esperan!</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 product-item">
+                <div class="card">
+                    <img src="{% static '' %}" class="card-img-top" alt="Producto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 1</h5>
+                        <p class="card-text">Descripción del Producto 1.</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product-item">
+                <div class="card">
+                    <img src="{% static '' %}" class="card-img-top" alt="Producto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 2</h5>
+                        <p class="card-text">Descripción del Producto 2.</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product-item">
+                <div class="card">
+                    <img src="{% static '' %}" class="card-img-top" alt="Producto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 3</h5>
+                        <p class="card-text">Descripción del Producto 3.</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="CERTIFICADET">
+    <p>&copy; 2024 Certificado por la corporación FocasAesthetics</p>
+</div>
+
+</body>
+</html>

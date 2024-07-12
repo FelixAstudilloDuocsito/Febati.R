@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sección de comentarios</title>
+    <link rel="stylesheet" href="{% static 'Styles/Diseño_CS_85.css' %}">
+</head>
+<body>
+    <header class="d-flex justify-content-between align-items-center">
+        <nav id="PANEL"> 
+            <li><a href="/lista">Editar</a></li>
+        </nav>
+        <nav id="PANEL">
+            <ul>
+                <li><a href="{% url 'INICIO' %}">INICIO</a></li>
+                <li><a href="{% url 'AYUDA' %}">AYUDA</a></li>
+                <li><a href="/SE/">SERVICIO AL CLIENTE</a></li>
+                <li><a href="/CS/">COMENTARIOS</a></li>
+            </ul>
+        </nav>
+        <a href="/carrito/"><button type="button" class="btn btn-outline-light">🛒</button></a>
+    </header>
+
+    <section id="PRESENTEICHON" style="background-color: #00000000; color: #0a0101;">
+        <h2>Acerca de Nosotros</h2>
+        <p>Bienvenido a Febati 85, tu tienda en línea de productos Aesthetics.</p>
+        <p>Nos especializamos en vender productos legítimos y confiables de HotMart.</p>
+        <p>Nuestra manera de ventas asegura productos de alta calidad sin preocupaciones de estafas.</p>
+    </section>
+
+    <!-- Formulario para añadir nuevos comentarios -->
+    <section id="nuevo-comentario">
+        <h2>Añadir un comentario</h2>
+        <form method="POST" action="{% url 'vista_cs' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Enviar</button>
+        </form>
+    </section>  
+
+    <!-- Mostrar comentarios existentes -->
+    <section id="comentarios">
+        <h2>Comentarios</h2>
+        <div class="comentarios-lista">
+            {% for comentario in comentarios %}
+                <div class="user">
+                    
+                    <img src="{% static 'img/pop-cat.gif' %}" alt="User Image">
+                    <div class="user-info">
+                        <p><strong>Fecha: {{ comentario.fecha }}</strong></p>
+                        <p><strong>{{ comentario.comentario }}</strong></p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <div class="container">
+        <button id="generateBtn">Ver comentarios</button>
+        <div id="userDetails">
+            <!-- Aquí se agregarán dinámicamente los usuarios -->
+        </div>
+    </div>
+
+    <script src="{% static 'JS/Main_CS_85.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
