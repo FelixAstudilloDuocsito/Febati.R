@@ -110,3 +110,27 @@ button:hover {
     border-radius: 10px; /* Bordes redondeados en las secciones */
     margin: 20px; /* Espacio alrededor de las secciones */
 }
+.comentarios-lista .user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.comentarios-lista .user img {
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.comentarios-lista .user-info {
+    display: flex;
+    flex-direction: column;
+}
+textarea {
+    font-size: 16px; /* Tamaño de fuente */
+    width: 95%; /* Ancho del textarea */
+    height: 100px; /* Altura del textarea */
+    background: transparent; /* Fondo transparente */
+    border: 1px solid #ccc; /* Borde del textarea */
+    padding: 10px; /* Espacio interno */
+    resize: vertical; /* Permitir redimensionamiento vertical */
+}

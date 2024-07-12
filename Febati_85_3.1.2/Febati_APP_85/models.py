@@ -16,3 +16,17 @@ class Comentar(models.Model):
 
     def __str__(self):
         return str(self.comentario)[:50]  # Muestra los primeros 50 caracteres del comentario
+    
+class Producto(models.Model):
+    id = models.AutoField(primary_key=True)
+    imagen = models.ImageField(upload_to='imagenes_productos/', null=True)  # Permitir nulos inicialmente
+    titulo = models.CharField(max_length=100)
+    descripcion = models.TextField()
+    precio = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
+
+    def __str__(self):
+        return self.titulo
+    
+class Imagen_Producto(models.Model):
+    producto = models.ForeignKey(Producto, related_name='imagenes', on_delete=models.CASCADE)
+    imagen = models.ImageField(upload_to='imagenes_productos/', null=True)

@@ -1,0 +1,51 @@
+/* Estilos para el formulario de agregar producto */
+
+/* Estilo para el contenedor del formulario */
+#agregar-producto-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para los campos del formulario */
+#agregar-producto-form .form-group {
+    margin-bottom: 20px;
+}
+
+/* Estilo para los botones del formulario */
+#agregar-producto-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#agregar-producto-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para los errores del formulario */
+#agregar-producto-form .error-message {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Estilo para las etiquetas de los campos */
+#agregar-producto-form label {
+    font-weight: bold;
+}
+
+/* Ajuste de estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    #agregar-producto-form {
+        padding: 15px;
+    }
+}

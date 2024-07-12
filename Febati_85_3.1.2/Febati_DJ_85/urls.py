@@ -2,6 +2,8 @@ from django.contrib import admin
 from django.urls import path
 from Febati_APP_85 import views
 from Febati_APP_85.views import RegView,EditUserView
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.Vista_E_LN_85, name = 'el_mister'),
@@ -19,4 +21,11 @@ urlpatterns = [
     path('ayuda/',views.Vista_E_AA_85, name = 'AYUDA'),
     path('user/',views.Vista_E_UR_85, name = 'USER'),
     path('carrito/',views.Vista_E_CO_85, name = 'CARRITO'),
-]
+    path('agrpro/', views.Vista_E_AO_85, name='agrpro'),
+    
+]   
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+

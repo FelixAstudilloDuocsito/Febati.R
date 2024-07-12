@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Usuario
+from .models import Usuario, Comentar,Producto
 from django.views import View
 from django.db import IntegrityError
+from .forms import ComentarioForm,ProductoForm  
 
 
 def Vista_E_RO_85(request):
@@ -29,6 +30,9 @@ def Vista_E_UR_85(request):
 
 def Vista_E_CO_85(request):
   return render(request, 'Estructura_CO_85.html')
+
+def Vista_E_AO_85(request):
+  return render(request, 'Agregar_pro.html')
 
 def prueba(request):
     usuarios = Usuario.objects.all()
@@ -133,3 +137,35 @@ class EliminarUsuarioView(View):
         usuario = get_object_or_404(Usuario, pk=pk)
         usuario.delete()
         return redirect('vistaL')
+
+def Vista_E_CS_85(request):
+    comentarios = Comentar.objects.all().order_by('-fecha')
+    form = ComentarioForm()
+
+    if request.method == 'POST':
+        form = ComentarioForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('vista_cs')  
+
+    context = {
+        'comentarios': comentarios,
+        'form': form,
+    }
+    return render(request, 'Estructura_CS_85.html', context)
+
+
+def Vista_E_PL_85(request):
+    productos = Producto.objects.all()  # Obtén todos los productos
+    return render(request, 'Estructura_PL_85.html', {'productos': productos})
+
+def Vista_E_AO_85(request):
+    if request.method == 'POST':
+        form = ProductoForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('INICIO')
+    else:
+        form = ProductoForm()
+    
+    return render(request, 'Agregar_pro.html', {'form': form})

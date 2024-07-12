@@ -41,7 +41,11 @@ nav ul li a {
     text-decoration: none;
 }
 
-
+.carousel-item img {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    height: auto; /* Altura automática para mantener la proporción */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin deformar */
+}
 /* Diseñito para el video de fondo*/
 #background-video {
     position: fixed; /* Fija el video en la pantalla */
